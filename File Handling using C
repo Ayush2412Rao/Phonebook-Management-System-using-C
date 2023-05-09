@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	char x;
+	FILE *fp;
+	fp=fopen("ayush.txt","w");
+	printf("Enter any key from keyboard: ");
+	x=getchar();//taking input into file from user
+	putc(x,fp);//putting data into file
+	fclose(fp);
+	fp=open("ayush.txt","r");
+	x=getc(fp);//taking out data from file
+	printf("\nData stored in the file is %c",x);
+	fclose(fp);
+}
