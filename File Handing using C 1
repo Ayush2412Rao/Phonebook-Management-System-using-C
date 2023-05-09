@@ -1,0 +1,17 @@
+#include<stdio.h>
+main()
+{
+	FILE *fp1;
+	char name[10];
+	int roll;
+	fp1=fopen("Kannu.txt","w");
+	printf("\nEnter roll no and name of student: ");
+	scanf("%d%s",&roll,name);
+	fprintf(fp1,"%d %s",roll,name);
+	fclose(fp1);
+	fp1=fopen("Kannu.txt","r");
+	fscanf(fp1,"%d %s",&roll,name);
+	printf("\nEntered data is \n");
+	printf("%d %s",roll,name);
+	fclose(fp1);
+}
