@@ -1,0 +1,4 @@
+import math
+a=int(input("Enter to know it's factorial: "))
+b=math.factorial(a)
+print(b) 
